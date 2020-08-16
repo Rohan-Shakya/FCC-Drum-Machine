@@ -1,38 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One');
+
+body {
+  font-family: Russo One;
+
+  user-select: none;
+  background-color: #c4c4c4;
+}
 .App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.drum {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.drum-pad {
+  background: gray;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 6px;
+  box-shadow: 1px 2px 1px 1px rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#display {
+  background: rgb(146, 146, 146);
+  border-radius: 5px;
+  width: 300px;
+  height: 80px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  line-height: 0;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  align-items: center;
+  font-size: 1.2rem;
+  margin: 1rem auto;
+  border: 2px solid black;
 }
